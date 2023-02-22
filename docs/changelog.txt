@@ -1,0 +1,6 @@
+Loops
+--------------------------------------------------------------------------------
+
+1. Input different types of values
+2. Print different types of values
+3. Draw a square by using '*'
