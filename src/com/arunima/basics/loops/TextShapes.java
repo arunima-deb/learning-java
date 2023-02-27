@@ -1,4 +1,4 @@
-package com.arunima.basics;
+package com.arunima.basics.loops;
 
 import java.util.Scanner;
 
