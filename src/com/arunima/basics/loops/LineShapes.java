@@ -4,7 +4,7 @@ public class LineShapes {
 	
 
 	public static void main(String[] args) {
-		int length = 12 ;
+		int length = 272349 ;
 		
 		LineShapes app = new LineShapes() ;
 		//app.exercise_01( length) ;
@@ -42,13 +42,11 @@ public class LineShapes {
 	// Given an integer number, find the factors of it.
 	public void exercise_03( int number ) {	
 		
-//		for( int a = 1; a<number+1; a++ ) {
-//			System.out.print( a );
-//		}
-//		
-//		do {
-//			System.out.println( number/a );
-//		}
-//		while(1==1) ;
+		for( int a = 1; a<number+1; a++ ) {
+			if((number % a) == 0) {
+				System.out.println( a );
+			}
+		}
+		
 	}
 }
