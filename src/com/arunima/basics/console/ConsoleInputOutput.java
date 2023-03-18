@@ -82,8 +82,6 @@ public class ConsoleInputOutput {
 	 */
 	public void exercise03() {
 		
-		
-		
 	}
 }
 
