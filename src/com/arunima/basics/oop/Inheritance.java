@@ -53,5 +53,12 @@ public class Inheritance {
         lion.saySomething() ;
         System.out.println( "\nOffering veggie to lion" ) ;
         lion.eatVeggie() ;
+        
+        Cow cow = new Cow() ;
+        
+        System.out.println( "\nSaying hi to cow : " ) ; 
+        cow.saySomething() ;
+        System.out.println( "\nOffering veggie to cow" ) ;
+        cow.eatVeggie() ;
     }
 }
