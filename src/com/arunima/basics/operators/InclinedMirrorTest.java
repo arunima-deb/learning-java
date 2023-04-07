@@ -10,9 +10,9 @@ class InclinedMirrorTest {
 
     @Test
     void testGetNumImages() {
-        assertEquals(  3, mirrors.getNumImages( 90 ) ) ;
-        assertEquals(  5, mirrors.getNumImages( 60 ) ) ;
-        assertEquals(  4, mirrors.getNumImages( 72 ) ) ;
-        assertEquals( 11, mirrors.getNumImages( 30 ) ) ;
+        assertEquals(  3, mirrors.getNumImages( 90, false ) ) ;
+        assertEquals(  5, mirrors.getNumImages( 60, false ) ) ;
+        assertEquals(  4, mirrors.getNumImages( 72, false ) ) ;
+        assertEquals( 11, mirrors.getNumImages( 30, false ) ) ;
     }
 }
