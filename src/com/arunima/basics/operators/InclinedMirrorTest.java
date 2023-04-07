@@ -9,15 +9,52 @@ class InclinedMirrorTest {
     InclinedMirrors mirrors = new InclinedMirrors() ;
 
     @Test
-    void testGetNumImages() {
-        assertEquals(  3, mirrors.getNumImages( 90, false ) ) ;
-        assertEquals(  3, mirrors.getNumImages( 90,  true ) ) ;
-        assertEquals(  5, mirrors.getNumImages( 60, false ) ) ;
-        assertEquals(  5, mirrors.getNumImages( 72, false ) ) ;
-        assertEquals(  4, mirrors.getNumImages( 72,  true ) ) ;
-        assertEquals( 11, mirrors.getNumImages( 30, false ) ) ;
-        assertEquals( 11, mirrors.getNumImages( 30,  true ) ) ;
-        assertEquals(  5, mirrors.getNumImages( 55,  true ) ) ;
-        assertEquals(  6, mirrors.getNumImages( 55, false ) ) ;
+    void testGetNumImagesEvenSymmetric() {
+        for( int i=4; i<=10; i+=2 ) {
+            double theta = 360/i ;
+            assertEquals( i-1, mirrors.getNumImages( theta, true ) ) ;
+        }
+    }
+    
+    @Test
+    void testGetNumImagesEvenAsymmetric() {
+        for( int i=4; i<=10; i+=2 ) {
+            double theta = 360/i ;
+            assertEquals( i-1, mirrors.getNumImages( theta, false ) ) ;
+        }
+    }
+    
+    @Test
+    void testGetNumImagesOddSymmetric() {
+        for( int i=5; i<=11; i+=2 ) {
+            double theta = 360/i ;
+            assertEquals( i-1, mirrors.getNumImages( theta, true ) ) ;
+        }
+    }
+    
+    @Test
+    void testGetNumImagesOddAsymmetric() {
+        for( int i=5; i<=11; i+=2 ) {
+            double theta = 360/i ;
+            assertEquals( i, mirrors.getNumImages( theta, false ) ) ;
+        }
+    }
+    
+    @Test
+    void testGetNumImagesDecimalSymmetric() {
+        for( int i=4; i<=10; i+=2 ) {
+            double theta = 360/(i+Math.random()) ;
+            int numImages = (int)(360/theta - 1) ;
+            assertEquals( numImages, mirrors.getNumImages( theta, true ) ) ;
+        }
+    }
+
+    @Test
+    void testGetNumImagesDecimalAsymmetric() {
+        for( int i=4; i<=10; i+=2 ) {
+            double theta = 360/(i+Math.random()) ;
+            int numImages = (int)(360/theta) ;
+            assertEquals( numImages, mirrors.getNumImages( theta, false ) ) ;
+        }
     }
 }
