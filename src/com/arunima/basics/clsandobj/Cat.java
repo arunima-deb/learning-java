@@ -22,7 +22,7 @@ public class Cat {
 	
 	public void jump() {
 		if( energyLevel < 2 ) {
-			System.err.println( "Can't jump. No energy :(" ) ;
+			System.err.println( "Can't jump. Not enough energy :(" ) ;
 		}
 		else {
 			System.out.println( "Jumping" ) ;
@@ -32,7 +32,7 @@ public class Cat {
 	
 	public void run() {
 		if( energyLevel < 1 ) {
-			System.err.println( "Can't run. No energy :(" ) ;
+			System.err.println( "Can't run. Not enough energy :(" ) ;
 		}
 		else {
 			System.out.println( "Running" ) ;
@@ -47,5 +47,9 @@ public class Cat {
 	
 	public void printEnergyLevel() {
 		System.out.println( "Energy level = " + energyLevel ) ;
+	}
+	
+	public int getEnergyLevel() {
+		return energyLevel ;
 	}
 }
