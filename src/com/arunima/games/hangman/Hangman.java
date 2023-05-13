@@ -22,6 +22,6 @@ public class Hangman {
 		puzzle = new Puzzle( word ) ;
 		
 		userInterface.printHangman( puzzle ) ;
-		userInterface.printChallenge( puzzle ) ;
+		userInterface.printPuzzle( puzzle ) ;
 	}
 }

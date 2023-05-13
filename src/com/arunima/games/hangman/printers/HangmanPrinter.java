@@ -1,9 +1,7 @@
-package com.arunima.games.hangman;
+package com.arunima.games.hangman.printers;
 
 /**
  * Prints the hangman according to the number of errors the user has made
- * 
- * @author jsonvariable
  */
 public class HangmanPrinter {
 	
@@ -61,7 +59,7 @@ public class HangmanPrinter {
 		System.out.println( " ______" ) ;
 		System.out.println( "|      |" ) ;
 		printBody( errorLevel ) ;
-		System.out.println( "|___________" ) ;
+		System.out.println( "|___________\n" ) ;
 	}
 	
 	private void printBody( int errorLevel ) {
