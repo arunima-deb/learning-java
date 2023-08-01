@@ -1,8 +1,10 @@
-package com.arunima.basics.operators;
+package com.arunima.basics.operators.test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
+
+import com.arunima.basics.operators.Expansions;
 
 class ExpressionsTest {
 	

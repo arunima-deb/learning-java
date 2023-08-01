@@ -1,16 +1,14 @@
-package com.arunima.basics.operators;
+package com.arunima.basics.operators.test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+import com.arunima.basics.operators.SimpleInterestCalculator;
+
 class SICalculatorTest {
 
 	SimpleInterestCalculator calc = new SimpleInterestCalculator() ;
-	
-	private double principal = 0 ;
-	private double duration = 0 ;
-	private double rate = 0 ;
 	
 	void setUp() {
 	}
