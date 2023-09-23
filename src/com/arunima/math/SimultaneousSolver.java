@@ -28,6 +28,6 @@ public class SimultaneousSolver
 		System.out.println( "\nx = " + x ) ;
 		System.out.println( "y = " + y ) ;
 		
-		sc.close();
+		sc.close(); 
 	}
 }
