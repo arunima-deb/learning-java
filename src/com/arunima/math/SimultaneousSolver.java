@@ -22,8 +22,8 @@ public class SimultaneousSolver
 		System.out.println( "Enter c2 : " ) ;
 		double c2 = sc.nextDouble() ;
 		
-		double x = (b1*c2 - b2*c1)/(a1*b2-a2*b1) ;
-		double y = (c1*a2 - c2*a1)/(a1*b2-a2*b1) ;
+		double x = ( b1*c2 - b2*c1 )/( a1*b2 - a2*b1 ) ;
+		double y = ( c1*a2 - c2*a1 )/( a1*b2 - a2*b1 ) ;
 		
 		System.out.println( "\nx = " + x ) ;
 		System.out.println( "y = " + y ) ;
