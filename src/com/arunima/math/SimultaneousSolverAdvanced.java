@@ -1,9 +1,9 @@
 package com.arunima.math;
 
-import java.util.* ;
+import java.util.Scanner;
 
-public class SimultaneousSolver 
-{
+public class SimultaneousSolverAdvanced {
+
 	public static void main( String args[] ) 
 	{
 		Scanner sc = new Scanner(System.in) ;
