@@ -2,6 +2,15 @@ package com.arunima.math;
 
 import java.util.* ;
 
+/* \Given a linear equation in 2 variables, how would you obtain
+ * a1, b1 and c1 in integer variables?
+ * 
+ * 1. Check if the equation is in standard form. If not, convert.
+ * 1a. How to convert?		
+ * 		
+ * 
+ */
+
 public class SimultaneousSolverAdvanced {
 
 	public static void main( String args[] ) 
