@@ -91,3 +91,10 @@ public class TypesOfLoops {
 		while( k < 5 ) ;
 	}
 }
+
+
+
+
+
+
+
