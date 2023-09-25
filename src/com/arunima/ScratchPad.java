@@ -21,4 +21,15 @@ public class ScratchPad
 		System.out.println( "Hey" );
 		
 	}
+	
+	public static void canIfHaveBreak()
+	{
+		int a = 1 ;
+		if(a==1)
+		{
+			System.out.println( "1" );
+		}
+		
+		System.out.println( "Hey" );
+	}
 }
