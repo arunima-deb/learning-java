@@ -7,7 +7,7 @@ import java.util.* ;
  * 
  * 1. Check if the equation is in standard form. If not, convert.
  * 1a. How to convert?		
- * 		
+ * 	   
  * 
  */
 
@@ -19,11 +19,6 @@ public class SimultaneousSolverAdvanced {
 		System.out.println( "Enter equation 1 : " ) ;
 		String e1 = sc.nextLine() ;
 		System.out.println( e1.length() ) ;
-		
-		if( e1.charAt(e1.length() - 1)!=0 )
-		{
-			
-		}
 		
 		int c = 0 ;
 		

@@ -6,15 +6,9 @@ public class Tester
 {
 	public static void main( String args[] )
 	{
-		String a = "" ;
-		String anew = a.replace( "a", "" ) ;
-
-		System.out.println( anew ) ;
+		Scanner sc = new Scanner(System.in) ;
+		System.out.println( "" ) ;
+		
+		sc.close();
 	}
-	
-	
-	
-	
-	
-	
 }
