@@ -34,12 +34,11 @@ public class SimultaneousSolverAdvanced {
 		while( c<e1.length()-1 && e1.charAt(c)!='=' ) ;
 		
 		System.out.println( e1 );
-		e1.replace( '=', '\0' ) ;
-		System.out.println( e1 );
+		e1new = e1.replace( '=', '\0' ) ;
+		System.out.println( e1new );
 		
-		int c1 = Integer.parseInt(e1) ;
-		
-		System.out.println( c1 );
+		int c1 =  Integer.parseInt( e1new ) ;
+		System.out.println( c1-5 ) ;
 		
 		sc.close();
 	}

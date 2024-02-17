@@ -7,19 +7,19 @@ public class SimultaneousSolver
 	public static void main( String args[] ) 
 	{
 		Scanner sc = new Scanner(System.in) ;
-		System.out.println( "Enter a1 : " ) ;
 		
+		System.out.print( "Enter a1 : " ) ;
 		double a1 = sc.nextDouble() ;
-		System.out.println( "Enter b1 : " ) ;
+		System.out.print( "Enter b1 : " ) ;
 		double b1 = sc.nextDouble() ;
-		System.out.println( "Enter c1 : " ) ;
+		System.out.print( "Enter c1 : " ) ;
 		double c1 = sc.nextDouble() ;
 		
-		System.out.println( "\nEnter a2 : " ) ;
+		System.out.print( "\nEnter a2 : " ) ;
 		double a2 = sc.nextDouble() ;
-		System.out.println( "Enter b2 : " ) ;
+		System.out.print( "Enter b2 : " ) ;
 		double b2 = sc.nextDouble() ;
-		System.out.println( "Enter c2 : " ) ;
+		System.out.print( "Enter c2 : " ) ;
 		double c2 = sc.nextDouble() ;
 		
 		double x = ( b1*c2 - b2*c1 )/( a1*b2 - a2*b1 ) ;
