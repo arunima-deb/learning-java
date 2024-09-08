@@ -51,7 +51,4 @@ public class QuadraticRoots {
 		
 		sc.close() ;
 	}
-	
-	byte a = 7 ;
-
 }
