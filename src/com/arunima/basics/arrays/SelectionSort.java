@@ -6,6 +6,7 @@ public class SelectionSort
 {
 	public static void main(String args[])
 	{
+		// Accepting array
 		Scanner sc = new Scanner(System.in) ;
 		int[] intArr = new int[10] ;
 		System.out.println( "Enter 10 array elements one by one : " ) ;
@@ -15,32 +16,45 @@ public class SelectionSort
 		}
 		
 		boolean isSorted = false ;
-		int min = intArr[0] ; 
+		int firstIndex = 0;
+		int min = intArr[0] ;
+		int minIndex = 0 ;
 		
-		for( int j=0; isSorted==false ; j++ )
+		for( int j=firstIndex; j<10; j++ )
 		{
-			for( int k=0; k<10; k++ )
+			for( int i=firstIndex; i<10; i++ )
 			{
-				if( intArr[k]<min )
-					min = intArr[j] ;
-				interchange( intArr, min, intArr[k] ) ;
+				if( intArr[i]<min )
+				{
+					min = intArr[i] ;
+					minIndex = i ;
+					firstIndex++ ;
+				}
 			}
+			interchange( intArr, 0, minIndex ) ;
+			printArr( intArr ) ;
 			isSorted = true ;
-		}
-		
-		for( int l=0; l<10; l++ )
-		{
-			System.out.println( intArr[l] ) ;
 		}
 		
 		sc.close() ;
 	}
 	
-	public static int[] interchange( int[] array, int prevItem, int newItem )
+	public static int[] interchange( int[] array, int prevIndex, int newIndex )
 	{
-		int temp = prevItem ;
-		prevItem = newItem ;
-		newItem = temp ;
+		int temp = array[prevIndex] ;
+		array[prevIndex] = array[newIndex] ;
+		array[newIndex] = temp ;
 		return array ;
+	}
+	
+	public static void printArr( int[] array )
+	{
+		System.out.print( "\n[ " ) ;
+		System.out.print( array[0] ) ;
+		for( int i=1; i<array.length; i++ )
+		{
+			System.out.print( ", " + array[i] );
+		}
+		System.out.print( " ]" ) ;
 	}
 }
