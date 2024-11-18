@@ -8,33 +8,33 @@ public class SelectionSort
 	{
 		// Accepting array
 		Scanner sc = new Scanner(System.in) ;
-		int[] intArr = new int[10] ;
-		System.out.println( "Enter 10 array elements one by one : " ) ;
-		for( int i=0; i<10; i++ )
+		print( "Enter length of array : " ) ;
+		int arrLen = sc.nextInt() ;
+		int[] arr = new int[arrLen] ;
+		print( "Enter " + arrLen + " array elements one by one : " ) ;
+		for( int i=0; i<arrLen; i++ )
 		{
-			intArr[i] = sc.nextInt() ;
+			arr[i] = sc.nextInt() ;
 		}
 		
-		boolean isSorted = false ;
-		int firstIndex = 0;
-		int min = intArr[0] ;
-		int minIndex = 0 ;
+		print( "\nUnsorted array : " ) ;
+		print( arr ) ;
 		
-		for( int j=firstIndex; j<10; j++ )
+		int mi ;
+		for( int ami=0; ami<arrLen; ami++ )
 		{
-			for( int i=firstIndex; i<10; i++ )
+			mi = ami ;
+			for( int i=0; i<arrLen; i++ )
 			{
-				if( intArr[i]<min )
-				{
-					min = intArr[i] ;
-					minIndex = i ;
-					firstIndex++ ;
-				}
+				if( arr[i]<arr[ami] )
+					mi = i ;
 			}
-			interchange( intArr, 0, minIndex ) ;
-			printArr( intArr ) ;
-			isSorted = true ;
+			interchange( arr, ami, mi ) ;
+			print( arr ) ;
 		}
+		
+		print( "\n\nSorted array : " ) ;
+		print( arr ) ;
 		
 		sc.close() ;
 	}
@@ -47,7 +47,20 @@ public class SelectionSort
 		return array ;
 	}
 	
-	public static void printArr( int[] array )
+	public static boolean isSorted( int[] array )
+	{
+		boolean isSorted = false ;
+		for( int i=1; i<array.length; i++ )
+		{
+			if( array[i]>array[i-1] )
+			{
+				isSorted = true ;
+			}
+		}
+		return isSorted ;
+	}
+	
+	public static void print( int[] array )
 	{
 		System.out.print( "\n[ " ) ;
 		System.out.print( array[0] ) ;
@@ -56,5 +69,10 @@ public class SelectionSort
 			System.out.print( ", " + array[i] );
 		}
 		System.out.print( " ]" ) ;
+	}
+	
+	public static void print( String st )
+	{
+		System.out.print( st ) ;
 	}
 }
