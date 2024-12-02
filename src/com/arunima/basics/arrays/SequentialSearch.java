@@ -11,17 +11,22 @@ public class SequentialSearch
 		
 		System.out.println( "Enter key : " ) ;
 		int key = sc.nextInt() ;
-		int keyIndex = -1;
+		int keyIndex = 0 ;
+		boolean isFound = false ;
 		
 		for( int i=0; i<arr.length; i++ )
 		{
 			if( arr[i]==key )
 			{
 				keyIndex = i ;
+				isFound = true ;
 			}
 		}
 		
-		System.out.println( "Index of key in array is " + keyIndex ) ;
+		if( isFound )
+			System.out.println( "Index of key in array is " + keyIndex ) ;
+		else
+			System.out.println( "Not found." ) ;
 		sc.close();
 	}
 }

@@ -20,18 +20,7 @@ public class SelectionSort
 		print( "\nUnsorted array : " ) ;
 		print( arr ) ;
 		
-		int mi ;
-		for( int ami=0; ami<arrLen; ami++ )
-		{
-			mi = ami ;
-			for( int i=0; i<arrLen; i++ )
-			{
-				if( arr[i]<arr[ami] )
-					mi = i ;
-			}
-			interchange( arr, ami, mi ) ;
-			print( arr ) ;
-		}
+		selectionSort( arr ) ;
 		
 		print( "\n\nSorted array : " ) ;
 		print( arr ) ;
@@ -47,17 +36,9 @@ public class SelectionSort
 		return array ;
 	}
 	
-	public static boolean isSorted( int[] array )
+	public static void selectionSort( int[] array )
 	{
-		boolean isSorted = false ;
-		for( int i=1; i<array.length; i++ )
-		{
-			if( array[i]>array[i-1] )
-			{
-				isSorted = true ;
-			}
-		}
-		return isSorted ;
+		
 	}
 	
 	public static void print( int[] array )

@@ -1,36 +1,49 @@
 package com.arunima.basics.arrays;
 
+import java.util.Scanner; 
+
 public class BubbleSort {
 
 	public static void main(String[] args) {
-		int stones[] = { 84, 20, 43, 6, 2 } ;
-		printArray( "Unsorted array", stones ) ;
-		bubbleSort( stones ) ;
-		printArray( "Sorted array", stones ) ;
+		Scanner sc = new Scanner(System.in) ;
+		int[] array = new int[5] ;
+		System.out.print( "Enter 5 array elements : " ) ;
+		for( int i=0; i<5; i++ )
+			array[i] = sc.nextInt() ;
+		System.out.print( "\nUnsorted Array : " ) ;
+		printArray(array) ;
+		
+		bubbleSort(array) ;
+		 
+		System.out.print( "\nSorted Array : " ) ;
+		printArray(array) ;
 	}
 	
 	public static void bubbleSort( int[] array ) {
-		
-		for( int oli=0; oli<array.length-1; oli++ ) {
-			for( int ili=0; ili<array.length-1-oli; ili++ ) { 
-				
-				int currentElement = array[ili] ;
-				int nextElement = array[ili+1] ;
-				
-				if( currentElement > nextElement ) {
-					int temp = nextElement ;
-					array[ili+1] = currentElement ;
-					array[ili] = temp ;
+		for( int i=0; i<array.length-1; i++ ) 
+		{
+			for( int j=0; j<array.length-i-1; j++ )
+			{
+				if( array[j]>array[j+1] )
+				{
+					swap( array, j, j+1 ) ;
 				}
 			}
-			printArray( "Outer loop " + (oli+1) + " complted.", array ) ;
 		}
 	}
 	
-	public static void printArray( String message, int[] array ) {
-		System.out.println( message ) ;
-		for( int i=0; i<array.length; i++ ) {
-			System.out.println( "  array[" + i + "] = " + array[i] ) ;
-		}
+	public static void swap( int[] array, int prevIndex, int newIndex )
+    {
+        int temp = array[prevIndex] ;
+        array[prevIndex] = array[newIndex] ;
+        array[newIndex] = temp ;
+    }
+	
+	public static void printArray( int[] array ) {
+		System.out.print( "\n[ " + array[0] ) ;
+		for( int i=1; i<array.length; i++ )
+			System.out.print( ", " + array[i] ) ;
+		System.out.print( " ]\n" ) ;
+		
 	}
 }
